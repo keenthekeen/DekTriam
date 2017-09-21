@@ -1,0 +1,67 @@
+html {
+    font-family: 'Kanit', serif;
+    font-size: 16px;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+a.brand-logo {
+    color: black;
+    font-size: 1.5rem !important
+}
+
+.footer-copyright a {
+    color: lightgrey;
+}
+
+.footer-copyright a:hover {
+    text-decoration: underline
+}
+
+.fullwidth {
+    width: 100%
+}
+
+main {
+    padding-top: 5px;
+}
+
+.slides .caption {
+    top: initial !important;
+    bottom: 10%;
+}
+
+.slides .caption h3 span {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.5rem 1.7rem 0.5rem 1.7rem;
+}
+
+.equal-height .card-panel {
+    width:100%;
+}
+
+#content-body {
+    font-size: 18px;
+}
+
+#content-body td,th {
+    padding: 5px;
+}
+
+#content-body p {
+    margin-bottom: 0.4rem;
+}
+
+@media only screen and (min-width: 993px) {
+    .modal {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .slides .caption h3 span {
+        display: block;
+    }
+}
