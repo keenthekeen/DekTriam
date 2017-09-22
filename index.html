@@ -38,21 +38,49 @@
             <img src="https://c1.staticflickr.com/419/18118335623_c7d226f6b6_h.jpg">
             <div class="caption right-align">
                 <h3><span>ความเป็นเลิศทางวิชาการและคุณธรรม</span></h3>
-                <h5 class="light grey-text text-lighten-3"><!-- Here's our small slogan. --></h5>
+                <h5 class="light grey-text text-lighten-3">พิธีประดับพระเกี้ยว แก่นักเรียนชั้นมัธยมศึกษาปีที่ 4</h5>
             </div>
         </li>
         <li>
             <img src="https://s6.postimg.org/l81a5agyp/1470497802284.jpg">
             <div class="caption right-align">
                 <h3><span>ความเป็นเลิศทางวิชาการและคุณธรรม</span></h3>
-                <h5 class="light grey-text text-lighten-3"><!-- Here's our small slogan. --></h5>
+                <h5 class="light grey-text text-lighten-3">พิธีมอบโล่รางวัลให้แก่นักเรียนที่ทำคุณประโยชน์</h5>
             </div>
         </li>
         <li>
-            <img src="https://c1.staticflickr.com/681/32287188660_9aa8ac4041_h.jpg">
+            <img src="https://c1.staticflickr.com/608/32568607612_9f5807930b_h.jpg">
             <div class="caption right-align">
                 <h3><span>"เรียนเราเด่น เล่นเราดี กีฬาเลิศ"</span></h3>
-                <h5 class="light grey-text text-lighten-3"><!-- Here's our small slogan. --></h5>
+                <h5 class="light grey-text text-lighten-3">คทากรโรงเรียน</h5>
+            </div>
+        </li>
+        <li>
+            <img src="https://s26.postimg.org/4k6bcovyx/IMG_1114.jpg">
+            <div class="caption right-align">
+                <h3><span>กิจกรรมพัฒนาผู้เรียนตามความสนใจ</span></h3>
+                <h5 class="light grey-text text-lighten-3">ชมรมดุริยางค์</h5>
+            </div>
+        </li>
+        <li>
+            <img src="https://c1.staticflickr.com/5/4161/34309200302_cf70a63cdc_b.jpg">
+            <div class="caption right-align">
+                <h3><span>กิจกรรมพัฒนาผู้เรียนตามความสนใจ</span></h3>
+                <h5 class="light grey-text text-lighten-3">การแนะนำกิจกรรมชมรมสำหรับนักเรียนใหม่</h5>
+            </div>
+        </li>
+        <li>
+            <img src="https://c1.staticflickr.com/724/31737437314_e35dccf60c_o.jpg">
+            <div class="caption right-align">
+                <h3><span>ปลูกฝังความเป็นผู้นำ-ผู้ตามที่ดี</span></h3>
+                <h5 class="light grey-text text-lighten-3">การจัดนิทรรศการวิชาการ</h5>
+            </div>
+        </li>
+        <li>
+            <img src="https://s6.postimg.org/sanigttr5/IMG_0074_PR.jpg">
+            <div class="caption right-align">
+                <h3><span>ความเป็นเลิศทางวิชาการ</span></h3>
+                <h5 class="light grey-text text-lighten-3">ได้รับรางวัลจากการแข่งขันโอลิมปิกวิชาการเป็นจำนวนมากในทุกๆปี</h5>
             </div>
         </li>
     </ul>
@@ -68,7 +96,7 @@
             </div>
         </div>
         <div class="col s12 m4">
-            <div class="card-panel white">
+            <div class="card-panel white" data-id="location">
                 <h3 class="black-text">สถานที่</h3>
             </div>
         </div>
@@ -78,6 +106,7 @@
             </div>
         </div>
     </div>
+
     <h5 class="section-header">แผนการเรียน</h5>
     <div class="row equal-height">
         <div class="col s12 m4">
@@ -97,9 +126,10 @@
         </div>
     </div>
 
+    <h5 class="section-header">กิจกรรมนักเรียน</h5>
     <div class="row equal-height">
         <div class="col s12 m3">
-            <div class="card-panel blue">
+            <div class="card-panel white">
                 <h3 class="white-text">กิจกรรม</h3>
             </div>
         </div>
@@ -150,10 +180,19 @@
         $('.modal').modal();
 
         $(".equal-height .card-panel").addClass("waves-effect waves-light hoverable").click(function () {
-            console.log($(this).data("id"));
-            $("#content-header").text($(this).children("h3").text());
-            $("#content-body").load("contents/"+$(this).data("id")+".html");
-            $('#content-modal').modal('open');
+            var id = $(this).data("id");
+            if (id) {
+                $("#content-header").text($(this).children("h3").text());
+                $("#content-body").load("contents/" + id + ".html");
+                $('#content-modal').modal('open');
+            } else {
+                var originalText = $(this).html();
+                var that = $(this);
+                that.text("Coming soon");
+                setTimeout(function () {
+                    that.html(originalText);
+                }, 1000);
+            }
         });
     });
 </script>
