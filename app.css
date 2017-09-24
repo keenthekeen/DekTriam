@@ -34,19 +34,19 @@ main {
 }
 
 .slides .caption h3 span {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0.5rem 1.7rem 0.5rem 1.7rem;
 }
 
 .equal-height .card-panel {
-    width:100%;
+    width: 100%;
 }
 
 #content-body {
     font-size: 18px;
 }
 
-#content-body td,th {
+#content-body td, th {
     padding: 5px;
 }
 
@@ -63,5 +63,33 @@ main {
 @media only screen and (max-width: 992px) {
     .slides .caption h3 span {
         display: block;
+    }
+}
+
+.plan-items {
+    overflow-x: scroll;
+    width: auto;
+    white-space: nowrap;
+}
+
+.plan-items .item {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.plan-items .card-panel {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.plan-items .card-panel img {
+    height: 1.5rem;
+}
+
+@media only screen and (min-width: 601px) {
+    .col .btn {
+        margin-top: 1.3rem;
     }
 }

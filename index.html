@@ -108,24 +108,78 @@
     </div>
 
     <h5 class="section-header">แผนการเรียน</h5>
-    <div class="row equal-height">
-        <div class="col s12 m4">
-            <div class="card-panel white">
-                <h3 class="black-text">วิทย์-คณิต</h3>
-            </div>
+    <div class="plan-items">
+        <div class="item center-align grey-text">
+            ภาษา<br/>เลือก
         </div>
-        <div class="col s12 m4">
-            <div class="card-panel white">
-                <h3 class="black-text">ภาษา-คณิต</h3>
-            </div>
+        <div class="card-panel white">
+            <img src="assets/flag_china.png"/><br/>ภาษาจีน
         </div>
-        <div class="col s12 m4">
-            <div class="card-panel white">
-                <h3 class="black-text">ภาษา-ภาษา</h3>
-            </div>
+        <div class="card-panel white">
+            <img src="assets/flag_japan.png"/><br/>ภาษาญี่ปุ่น
+        </div>
+        <div class="card-panel white">
+            <img src="assets/flag_germany.png"/><br/>ภาษาเยอรมัน
+        </div>
+        <div class="card-panel white">
+            <img src="assets/flag_france.png"/><br/>ภาษาฝรั่งเศส
+        </div>
+        <div class="card-panel white">
+            <img src="assets/flag_spain.png"/><br/>ภาษาสเปน
+        </div>
+        <div class="card-panel white">
+            <img src="assets/flag_korea.png"/><br/>ภาษาเกาหลี
+        </div>
+    </div>
+    <div class="plan-items">
+        <div class="item center-align grey-text">
+            วิชา<br/>เลือก<br/>(วิทย์)
+        </div>
+        <div class="card-panel white">
+            <i class="material-icons small">computer</i><br/>Computer
+        </div>
+        <div class="card-panel white">
+            <i class="material-icons small">local_hospital</i><br/>สุขภาพ
+        </div>
+    </div>
+    <br/>
+    <h5 class="grey-text" style="font-size: 1.2rem">เลือกแผนการเรียน</h5>
+    <div class="row">
+        <div class="input-field col s12 m4 l3">
+            <select id="plan-main">
+                <option value="" disabled selected>เลือกประเภทวิทย์/ภาษา</option>
+                <option value="sci">วิทย์-คณิต</option>
+                <option value="math">ภาษา-คณิต</option>
+                <option value="art">ภาษา-ภาษา</option>
+            </select>
+            <label>ประเภทแผนการเรียน</label>
+        </div>
+        <div class="input-field col s12 m4 l3">
+            <select id="plan-lang">
+                <option value="" disabled selected>เลือกภาษา</option>
+                <option id="plan-lang-opt-china" value="china">ภาษาจีน</option>
+                <option value="france">ภาษาฝรั่งเศส</option>
+                <option value="germany">ภาษาเยอรมณี</option>
+                <option value="japan">ภาษาญี่ปุ่น</option>
+                <option value="korea">ภาษาเกาหลี</option>
+                <option value="spain">ภาษาสเปน</option>
+            </select>
+            <label>ภาษาต่างประเทศที่ 2</label>
+        </div>
+        <div class="input-field col s12 m4 l3">
+            <select id="plan-sci">
+                <option value="" disabled selected>เลือกวิชา</option>
+                <option value="computer">Computer Science</option>
+                <option value="health">วิทยาศาสตร์สุขภาพ</option>
+            </select>
+            <label>วิชาเลือก (วิทย์)</label>
+        </div>
+        <div class="col s12 m12 l3">
+            <a class="waves-effect waves-light btn fullwidth">ดูข้อมูล</a>
         </div>
     </div>
 
+    <br/>
     <h5 class="section-header">กิจกรรมนักเรียน</h5>
     <div class="row equal-height">
         <div class="col s12 m3">
@@ -175,9 +229,9 @@
 <script>
     $(function () {
         $(".button-collapse").sideNav();
-        $(".dropdown-button").dropdown();
         $('.slider').slider({full_width: true, height: 500});
         $('.modal').modal();
+        $('select').material_select();
 
         $(".equal-height .card-panel").addClass("waves-effect waves-light hoverable").click(function () {
             var id = $(this).data("id");
@@ -193,6 +247,23 @@
                     that.html(originalText);
                 }, 1000);
             }
+        });
+        $(".plan-items .card-panel").addClass("waves-effect waves-light hoverable");
+        $("#plan-main").change(function () {
+            switch ($("#plan-main").find("option:selected").val()) {
+                case 'sci':
+                    $("#plan-lang, #plan-sci").attr("disabled", false);
+                    break;
+                case 'math':
+                    $("#plan-lang, #plan-sci").attr("disabled", true);
+                    $("#plan-lang-opt-china").prop('selected', true);
+                    break;
+                case 'art':
+                    $("#plan-lang").attr("disabled", false);
+                    $("#plan-sci").attr("disabled", true);
+                    break;
+            }
+            $('select').material_select();
         });
     });
 </script>
