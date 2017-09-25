@@ -28,13 +28,6 @@
 <div class="slider">
     <ul class="slides">
         <li>
-            <img src="https://s27.postimg.org/ibp81z877/12359843_10153259859517543_6975754726647072854_n.jpg">
-            <div class="caption right-align">
-                <h3><span>ต.อ. ต้นกล้าแห่งแผ่นดิน</span></h3>
-                <h5 class="light grey-text text-lighten-3"><!-- Here's our small slogan. --></h5>
-            </div>
-        </li>
-        <li>
             <img src="https://c1.staticflickr.com/419/18118335623_c7d226f6b6_h.jpg">
             <div class="caption right-align">
                 <h3><span>ความเป็นเลิศทางวิชาการและคุณธรรม</span></h3>
@@ -56,6 +49,13 @@
             </div>
         </li>
         <li>
+            <img src="https://s26.postimg.org/43wasnubt/image.jpg">
+            <div class="caption right-align">
+                <h3><span>กิจกรรมพัฒนาผู้เรียนตามความสนใจ</span></h3>
+                <h5 class="light grey-text text-lighten-3">ชมรมของเล่นเพื่อการเรียนรู้</h5>
+            </div>
+        </li>
+        <li>
             <img src="https://s26.postimg.org/4k6bcovyx/IMG_1114.jpg">
             <div class="caption right-align">
                 <h3><span>กิจกรรมพัฒนาผู้เรียนตามความสนใจ</span></h3>
@@ -73,11 +73,11 @@
             <img src="https://c1.staticflickr.com/724/31737437314_e35dccf60c_o.jpg">
             <div class="caption right-align">
                 <h3><span>ปลูกฝังความเป็นผู้นำ-ผู้ตามที่ดี</span></h3>
-                <h5 class="light grey-text text-lighten-3">การจัดนิทรรศการวิชาการ</h5>
+                <h5 class="light grey-text text-lighten-3">ผ่านการให้นักเรียนมีส่วนร่วมในการจัดกิจรรมต่างๆ</h5>
             </div>
         </li>
         <li>
-            <img src="https://s6.postimg.org/sanigttr5/IMG_0074_PR.jpg">
+            <img src="assets/slide_bioolympic.JPG">
             <div class="caption right-align">
                 <h3><span>ความเป็นเลิศทางวิชาการ</span></h3>
                 <h5 class="light grey-text text-lighten-3">ได้รับรางวัลจากการแข่งขันโอลิมปิกวิชาการเป็นจำนวนมากในทุกๆปี</h5>
@@ -91,7 +91,7 @@
     <h5 class="section-header">เกี่ยวกับโรงเรียน</h5>
     <div class="row equal-height">
         <div class="col s12 m4">
-            <div class="card-panel white" data-id="history">
+            <div class="card-panel white" data-id="history" id="history-button">
                 <h3 class="black-text">ประวัติ</h3>
             </div>
         </div>
@@ -136,7 +136,7 @@
             วิชา<br/>เลือก<br/>(วิทย์)
         </div>
         <div class="card-panel white">
-            <i class="material-icons small">computer</i><br/>Computer
+            <i class="material-icons small">computer</i><br/>คอมพิวเตอร์
         </div>
         <div class="card-panel white">
             <i class="material-icons small">local_hospital</i><br/>สุขภาพ
@@ -181,28 +181,128 @@
 
     <br/>
     <h5 class="section-header">กิจกรรมนักเรียน</h5>
-    <div class="row equal-height">
-        <div class="col s12 m3">
-            <div class="card-panel white">
-                <h3 class="white-text">กิจกรรม</h3>
-            </div>
+    <div class="plan-items" id="activity-items">
+        <div class="item">
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130911" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_art.jpg">
+                        <span class="card-title">ชมรมนาฏศิลป์</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130945" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_toy.jpg">
+                        <span class="card-title">ชมรมของเล่นเพื่อการเรียนรู้</span>
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="col s12 m3">
-            <div class="card-panel white">
-                <h3 class="black-text">ชมรม</h3>
-            </div>
+        <div class="item">
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130951" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_earth.jpg">
+                        <span class="card-title">ชมรมโลกศาสตร์</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130943" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_scitech.jpg">
+                        <span class="card-title">ชมรม Sci-Tech</span>
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="col s12 m3">
-            <div class="card-panel white">
-                <h3 class="black-text">เพื่อสังคม</h3>
-            </div>
+        <div class="item">
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130942" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_fashion.jpg">
+                        <span class="card-title">ชมรมนิเทศศิลป</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130912" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_speech.jpg">
+                        <span class="card-title">ชมรมวาทศิลป์</span>
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="col s12 m3">
-            <div class="card-panel white">
-                <h3 class="black-text">กีฬา</h3>
-            </div>
+        <div class="item">
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130927" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_computer.jpg">
+                        <span class="card-title">ชมรมคอมพิวเตอร์</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://clubs.triamudom.ac.th/club/%E0%B8%8130950" target="_blank">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img src="assets/club_entertainer.jpg">
+                        <span class="card-title">ชมรมสันทนากร</span>
+                    </div>
+                </div>
+            </a>
         </div>
+        <!-- div class="item">
+            <a href="https://clubs.triamudom.ac.th" target="_blank" title="งานกิจกรรมพัฒนาผู้เรียน">
+                <div class="card-panel white">
+                ดูเพิ่มเติม
+                </div>
+            </a>
+        </div -->
     </div>
+    <br/>
+    <h5 class="section-header">คำถามที่ถามบ่อย</h5>
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">get_app</i>จะสมัครเข้าศึกษาต่อที่โรงเรียนเตรียมอุดมศึกษาได้อย่างไร</div>
+            <div class="collapsible-body">
+                ใน<u>ปีการศึกษา 2560</u> โรงเรียนเตรียมอุดมศึกษา เปิดรับนักเรียนในรูปแบบต่างๆ รวมทั้งสิ้น 1,480 คน ดังนี้
+                <ol>
+                    <li>โควตาจังหวัด 296 คน</li>
+                    <li>โควตาความสามารถพิเศษ รวม 75 คน ได้แก่
+                        <ul class="browser-default">
+                            <li>ด้านวิชาการ</li>
+                            <li>ด้านกีฬา ได้แก่ ว่ายน้ำ กอล์ฟ เทนนิส ฟุตบอล บาสเกตบอล วอลเลย์บอล ยิงปืน เทเบิลเทนนิส เทควันโด ยิมนาสติกลีลา และแบดมินตัน</li>
+                            <li>ด้านดนตรีไทยร่วมสมัยและขับร้องเพลงไทย</li>
+                            <li>ด้านนาฏศิลป์ไทย</li>
+                            <li>ด้านดุริยางค์</li>
+                            <li>ด้านศิลปะ</li>
+                        </ul>
+                    </li>
+                    <li>สอบคัดเลือกทั่วไป 1,110 คน</li>
+                </ol>
+                <br/>
+                สามารถติดตามประกาศรับสมัครได้ที่<a href="http://www.triamudom.ac.th" target="_blank">เว็บไซต์โรงเรียน</a>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">attach_money</i>ค่าเล่าเรียนเป็นอย่างไร สามารถรับทุนการศึกษาได้หรือไม่</div>
+            <div class="collapsible-body"><span>โรงเรียนเตรียมอุดมศึกษาเป็นโรงเรียนรัฐบาล สังกัดสพฐ. มีการเรียกเก็บค่าบำรุงการศึกษา อย่างไรก็ตามโรงเรียนได้จัดให้มีทุนการศึกษาสำหรับนักเรียนที่ขาดแคลนทุนทรัพย์ โดยนักเรียนสามารถติดต่อขอรับพิจารณาได้หลังเปิดภาคเรียนในแต่ละปี</span>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>โรงเรียนเตรียมอุดมศึกษาสังกัดจุฬาลงกรณ์มหาวิทยาลัยใช่หรือไม่</div>
+            <div class="collapsible-body"><span>ในปัจจุบัน โรงเรียนเตรียมอุดมศึกษาสังกัดสำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน กระทรวงศึกษาธิการ และต้องสอบคัดเลือกเข้าจุฬาลงกรณ์มหาวิทยาลัยเช่นเดียวกับนักเรียนโรงเรียนอื่น (ดูที่ <a
+                    href="#history-button">ประวัติ</a>)</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>สามารถเข้ามาเยี่ยมชมโรงเรียนได้อย่างไร</div>
+            <div class="collapsible-body"><span>โรงเรียนเตรียมอุดมศึกษา จัดนิทรรศการวิชาการขึ้นทุกๆปี สามารถติดตามได้ที่ <a href="https://www.facebook.com/TriamUdomOPH/"
+                                                                                                                            target="_blank">Facebook Page</a></span></div>
+        </li>
+    </ul>
 </main>
 
 <footer class="page-footer pink lighten-3">
@@ -216,8 +316,8 @@
 <!-- Modal Structure -->
 <div id="content-modal" class="modal">
     <div class="modal-content">
-        <h4 id="content-header">Modal Header</h4>
-        <p id="content-body">A bunch of text</p>
+        <h4 id="content-header">Loading</h4>
+        <p id="content-body">Loading.....</p>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">ปิด</a>
@@ -232,11 +332,12 @@
         $('.slider').slider({full_width: true, height: 500});
         $('.modal').modal();
         $('select').material_select();
+        $('.parallax').parallax();
 
         $(".equal-height .card-panel").addClass("waves-effect waves-light hoverable").click(function () {
             var id = $(this).data("id");
             if (id) {
-                $("#content-header").text($(this).children("h3").text());
+                $("#content-header").text($(this).text());
                 $("#content-body").load("contents/" + id + ".html");
                 $('#content-modal').modal('open');
             } else {

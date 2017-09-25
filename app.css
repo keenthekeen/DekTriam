@@ -13,7 +13,7 @@ a.brand-logo {
 }
 
 .footer-copyright a {
-    color: lightgrey;
+    color: white;
 }
 
 .footer-copyright a:hover {
@@ -92,4 +92,8 @@ main {
     .col .btn {
         margin-top: 1.3rem;
     }
+}
+
+#activity-items .card {
+    width: 300px;
 }
